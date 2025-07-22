@@ -97,6 +97,34 @@ function describePerson(name, age, city) {
 
 describePerson("Inshal", 21, "Faisalabad");
 
+/ Passing by Value vs Reference in JavaScript
 
+// When you call a function and provide arguments, JavaScript passes those values to the function.
+// There are two ways this happens depending on the data type:
+
+// Passing by Value (Primitive types)
+// Primitives like: number, string, boolean, undefined, null, symbol, bigint
+// The actual value is copied — changes do not affect the original.
+
+function updateValue(x) {
+  x = 20;
+  console.log("Inside function:", x);
+}
+
+let a = 10;
+updateValue(a);
+console.log("Outside function:", a);
+
+//  Passing by Reference (Non-primitive types)
+// Objects and arrays are passed by reference.
+// Only the reference (memory address) is passed, so changes affect the original.
+
+function updatePerson(personObj) {
+  personObj.name = "Amber";
+}
+
+let person = { name: "Inshal" };
+updatePerson(person);
+console.log(person.name);
 
 
