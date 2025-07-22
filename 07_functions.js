@@ -87,6 +87,16 @@ function greet(name = "Guest") {
 greet("Inshal");  // Hello, Inshal!
 greet();          // Hello, Guest!
 
+// Argument Order and Matching in JavaScript
+
+// When you call a function, the arguments are matched to parameters by order, from left to right
+
+function describePerson(name, age, city) {
+  console.log(`${name} is ${age} years old and lives in ${city}.`);
+}
+
+describePerson("Inshal", 21, "Faisalabad");
+
 
 
 
